@@ -4,46 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Sinks Login Form</title>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Employee List</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Employee List</h1>
-        <table>
-            <thead>
+<body class="bg-gray-100 p-10">
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Employee List</h1>
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead class="bg-gray-200">
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                    <th>Actions</th>
+                    <th class="py-2 px-4 border-b">Name</th>
+                    <th class="py-2 px-4 border-b">Job Title</th>
+                    <th class="py-2 px-4 border-b">Department</th>
+                    <th class="py-2 px-4 border-b">Email</th>
+                    <th class="py-2 px-4 border-b">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Sample employee data -->
-                <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>Software Engineer</td>
-                    <td>IT</td>
-                    <td>
-                        <a href="#">Edit</a> |
-                        <a href="#">Delete</a>
+                <tr class="hover:bg-gray-100">
+                    <td class="py-2 px-4 border-b">Jether Lucas</td>
+                    <td class="py-2 px-4 border-b">Cyber Security</td>
+                    <td class="py-2 px-4 border-b">IT</td>
+                    <td class="py-2 px-4 border-b">JetherLucas143@gmail.com</td>
+                    <td class="py-2 px-4 border-b">
+                        <button class="bg-blue-500 text-white px-4 py-1 rounded" onclick="openModal('Jether Lucas', 'Cyber Security', 'IT', 'JetherLucas143@gmail.com', '+143', 'Cervantes, Ilocos sur')">Info</button>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>HR Manager</td>
-                    <td>Human Resources</td>
-                    <td>
-                        <a href="#">Edit</a> |
-                        <a href="#">Delete</a>
+                <tr class="hover:bg-gray-100">
+                    <td class="py-2 px-4 border-b">Ben Masidong</td>
+                    <td class="py-2 px-4 border-b">Web Developer</td>
+                    <td class="py-2 px-4 border-b">IT</td>
+                    <td class="py-2 px-4 border-b">BenTen@gmail.com</td>
+                    <td class="py-2 px-4 border-b">
+                        <button class="bg-blue-500 text-white px-4 py-1 rounded" onclick="openModal('Ben Masidong', 'Web Developer', 'IT', 'BenTen@gmail.com', '+8', 'Green Ilog St.')">Info</button>
                     </td>
                 </tr>
-                <!-- More employees here -->
             </tbody>
         </table>
     </div>
+
+    <div id="employeeModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 id="modalName" class="text-2xl font-bold mb-4"></h2>
+            <p id="modalJobTitle" class="mb-2"></p>
+            <p id="modalDepartment" class="mb-2"></p>
+            <p id="modalEmail" class="mb-2"></p>
+            <p id="modalPhone" class="mb-2"></p>
+            <p id="modalAddress" class="mb-2"></p>
+            <button class="bg-red-500 text-white px-4 py-1 rounded" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(name, jobTitle, department, email, phone, address) {
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalJobTitle').innerText = `Job Title: ${jobTitle}`;
+            document.getElementById('modalDepartment').innerText = `Department: ${department}`;
+            document.getElementById('modalEmail').innerText = `Email: ${email}`;
+            document.getElementById('modalPhone').innerText = `Phone: ${phone}`;
+            document.getElementById('modalAddress').innerText = `Address: ${address}`;
+            document.getElementById('employeeModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('employeeModal').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
