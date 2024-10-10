@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -14,7 +12,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 100%;
-
 }
 
 #loginBody {
@@ -25,20 +22,21 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-
 .auto-grid {
     width: 100%;
     max-width: 400px;
     padding: 30px;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255, 1); 
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 form h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.563rem; 
     color: #333;
     margin-bottom: 24px;
 }
@@ -52,7 +50,7 @@ form h1 {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .form-control:focus {
@@ -64,21 +62,21 @@ form h1 {
     color: black !important;
 }
 
-.form-control:user-valid {
+.form-control:valid {
     outline: none;
     border-color: #28a745;
 }
 
-.form-control:user-valid+i {
+.form-control:valid+i {
     color: #28a745;
 }
 
-.form-control:user-invalid {
+.form-control:invalid {
     outline: none;
     border-color: #c93030;
 }
 
-.form-control:user-invalid+i {
+.form-control:invalid+i {
     color: #c93030;
 }
 
@@ -86,7 +84,7 @@ form h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
     width: 100%;
     padding: 12px;
     background-color: #3C76CC;
@@ -98,7 +96,6 @@ form h1 {
     text-transform: uppercase;
 }
 
-
 .button:hover {
     background-color: #0056b3;
 }
@@ -106,7 +103,7 @@ form h1 {
 .auto-grid i {
     position: absolute;
     transform: translate(-35px, 35%);
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 #logo {
