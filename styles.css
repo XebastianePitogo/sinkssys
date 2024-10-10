@@ -13,7 +13,7 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.container {
+.auto-grid {
     width: 100%;
     max-width: 400px; 
     padding: 30px;
@@ -43,8 +43,17 @@ form h1 {
 
 .form-control:focus {
     outline: none;
+    border-color: #6C757D  !important;
+}
+
+.form-control:user-valid {
+    outline: none;
     border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.form-control:user-invalid {
+    outline: none;
+    border-color: #c93030;
 }
 
 .button {
