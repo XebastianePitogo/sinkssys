@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,26 +7,37 @@
 }
 
 body {
+    background-image: url('Assets/CompanyBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 100%;
+}
+
+#loginBody {
     height: 100vh;
-    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
 }
 
-.container {
+
+.auto-grid {
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
     padding: 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1); 
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 form h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.563rem; 
     color: #333;
     margin-bottom: 24px;
 }
@@ -38,21 +51,45 @@ form h1 {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .form-control:focus {
     outline: none;
+    border-color: #6C757D !important;
+}
+
+.form-control:focus+i {
+    color: black !important;
+}
+
+.form-control:valid {
+    outline: none;
     border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.form-control:valid+i {
+    color: #28a745;
+}
+
+.form-control:invalid {
+    outline: none;
+    border-color: #c93030;
+}
+
+.form-control:invalid+i {
+    color: #c93030;
 }
 
 .button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
     width: 100%;
     padding: 12px;
-    background-color: #28a745;
+    background-color: #3C76CC;
     color: white;
-    font-size: 16px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -61,5 +98,25 @@ form h1 {
 }
 
 .button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
+}
+
+.auto-grid i {
+    position: absolute;
+    transform: translate(-35px, 35%);
+    font-size: 1.563rem;
+}
+
+#logo {
+    height: 7rem;
+    width: auto;
+}
+
+.flex-container,
+#headerLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
